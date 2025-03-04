@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำณวนโรคอ้วน</title>
+</head>
+<body>
+    <form action="{{url_for('predict')}}" method="POST">
+            <input type="number" name="height" value="173">
+            <input type="number" name="weight" value="71">
+            <input type="number" name="bmi" value="23">
+            <select name="physical">
+                <option value="1">ไม่ออกกำลังกาย</option>
+                <option value="2">ออกกำลังกายน้อยมาก</option>
+                <option value="3">ออกกำลังกายปานกลาง</option>
+                <option value="4">ออกกำลังกายมาก</option>
+            </select>
+            <button type="submit">
+                    คำณวน
+            </button>
+    </form>
+</body>
+</html>
