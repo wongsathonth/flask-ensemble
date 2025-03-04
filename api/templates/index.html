@@ -4,21 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>คำณวนโรคอ้วน</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    <form action="{{url_for('predict')}}" method="POST">
-            <input type="number" name="height" value="173">
-            <input type="number" name="weight" value="71">
-            <input type="number" name="bmi" value="23">
+    <div class="container">
+        <h2>คำนวณโรคอ้วน</h2>
+        <form action="{{url_for('predict')}}" method="POST">
+            <input type="number" name="height" value="173" placeholder="ส่วนสูง (cm)">
+            <input type="number" name="weight" value="71" placeholder="น้ำหนัก (kg)">
+            <input type="number" name="bmi" value="23" placeholder="BMI">
             <select name="physical">
                 <option value="1">ไม่ออกกำลังกาย</option>
                 <option value="2">ออกกำลังกายน้อยมาก</option>
                 <option value="3">ออกกำลังกายปานกลาง</option>
                 <option value="4">ออกกำลังกายมาก</option>
             </select>
-            <button type="submit">
-                    คำณวน
-            </button>
-    </form>
+            <button type="submit">คำนวณ</button>
+        </form>
+    </div>
 </body>
 </html>
