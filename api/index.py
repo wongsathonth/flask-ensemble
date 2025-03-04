@@ -37,7 +37,7 @@ def predict():
 @app.route("/predict/line", methods=["POST"])
 def predict_line():
     try:
-         data = request.get_json()
+        data = request.get_json()
         height = data['Height']
         weight = data['Weight']
         bmi = data['BMI']

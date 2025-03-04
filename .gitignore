@@ -175,3 +175,4 @@ cython_debug/
 .vercel
 .env*.local
 *.onnx
+.vercel
